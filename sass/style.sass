@@ -1,0 +1,131 @@
+@import 'normolize'
+@import 'elements'
+
+main
+    min-height: 100vh
+
+.temp
+    margin: 0 auto
+    padding: 20px
+    max-width: 550px
+    &__heading
+        font-size: 28px
+        margin: 0 0 20px
+        line-height: 150%
+        max-width: 90%
+
+    &__text
+        max-width: 90%
+        font-size: 16px
+        line-height: 160%
+        color: rgba(0, 0, 0, .6)
+        margin: 0 0 15px
+
+    &__count
+        font-size: 14px
+        color: #e73c3b
+        display: inline-block
+        text-decoration: none
+
+    &__label
+        color: #000
+        display: block
+        font-weight: 700
+        font-size: 16px
+        line-height: 140%
+        margin-bottom: 10px
+
+    &-wrap
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+
+    &-check
+        width: 100%
+        display: inline-block
+        border-bottom: 1px solid rgba(0, 0, 0, .2)
+        label
+            cursor: pointer
+            display: block
+            font-size: 16px
+            font-weight: 600
+            font-size: 14px
+            padding: 20px 0 20px 35px
+            position: relative
+            &::before,
+            &::after
+                content: ''
+                display: inline-block
+                width: 21px
+                height: 21px
+                border: 1px solid rgba(0, 0, 0, .2)
+                border-radius: 7px
+                position: absolute
+                top: 50%
+                left: 0
+                transform: translateY(-50%)
+                box-sizing: border-box
+                transition: all ease .2s
+            &::after
+                width: 8px
+                height: 15px
+                background-color: transparent
+                border-radius: 0
+                border: none
+                border-right: 1px solid #fff
+                border-bottom: 1px solid #fff
+                transform: rotate(45deg) scale(.3)
+                opacity: 0
+                top: 20px
+                left: 7px
+
+            i
+                font-style: normal
+                opacity: .6
+
+        input
+            display: none
+            &:checked + label
+                &:before
+                    border-color: transparent
+                    background-color: #e73c3b
+                &::after
+                    transform: rotate(45deg) scale(.8)
+                    opacity: 1
+
+    &-radio
+        margin: 10px
+        display: inline-block
+        label
+            cursor: pointer
+            display: block
+            font-size: 16px
+            font-weight: 600
+            font-size: 14px
+            padding: 12px 15px
+            position: relative
+            border-radius: 20px
+            background-color: rgba(0, 0, 0, .1)
+
+            i
+                font-style: normal
+                opacity: .6
+
+        input
+            display: none
+            &:checked + label
+                background-color: #e73c3b
+                color: #fff
+
+    fieldset
+        margin-bottom: 30px
+
+    &__btn
+        display: block
+        padding: 20px 20px 19px
+        color: #fff
+        background-color: #e73c3b
+        width: 100%
+        border-radius: 8px
+        font-weight: 600
+        box-shadow: 0 0 20px -5px #e73c3b
