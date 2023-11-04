@@ -5,12 +5,23 @@
     border: none
     outline: none
 
+@font-face
+    font-family: 'LabGrotesque'
+    src: url('../font/LabGrotesque-Regular.woff2') format('woff2')
+    font-weight: normal
+    font-style: normal
+
+@font-face
+    font-family: 'LabGrotesque'
+    src: url('../font/LabGrotesque-Medium.woff2') format('woff2')
+    font-weight: 500
+    font-style: normal
 
 body
     min-height: 100vh
     color: #000
     background-color: #fff
-    font-family: 'Montserrat', sans-serif
+    font-family: 'LabGrotesque', sans-serif
 
 input,
 textarea,
@@ -31,7 +42,6 @@ select
     &::placeholder
         color: rgba(#000 , .6)
         font-weight: 300
-
 
 fieldset
     border: none
